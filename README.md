@@ -1,8 +1,18 @@
-# 🎬 StreamFlix - Open Source Streaming Platform
+# 🎬 SanuFlix - Open Source Streaming Platform
 
-A modern, feature-rich streaming platform template built with React, TypeScript, and Vite. Fork this project to create your own movie and TV show streaming site.
+<div align="center">
 
-> **Note**: This is a template project. You need to configure your own TMDB API key and embed servers.
+### 🌐 [Live Demo](https://sanuflix-web-v2.pages.dev/)
+
+[![Deploy to Cloudflare Pages](https://img.shields.io/badge/Deploy-Cloudflare%20Pages-F38020?logo=cloudflare)](https://pages.cloudflare.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
+</div>
+
+---
+
+> [!WARNING]
+> **Legal Disclaimer**: This application does not host, store, or distribute any movies, TV shows, or copyrighted content. All video content is provided by **third-party embed servers** that are configured by the user. The developer is not responsible for any content accessed through this application. Use at your own risk and ensure compliance with your local laws.
 
 ---
 
@@ -11,102 +21,128 @@ A modern, feature-rich streaming platform template built with React, TypeScript,
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/YOUR_USERNAME/sanuflix-opensource.git
+cd sanuflix-opensource
 npm install
 ```
 
 ### 2. Configure Environment
 
-Copy the example environment file:
-
 ```bash
 cp .env.example .env
 ```
 
-Edit `.env` with your settings:
+Edit `.env`:
 
 ```env
-# Required: Get your free API key at https://themoviedb.org/settings/api
+# Required: Get free at https://themoviedb.org/settings/api
 VITE_TMDB_API_KEY=your_tmdb_api_key_here
 
-# Optional: Sports streaming API
+# Optional
 VITE_SPORTS_API_URL=
-
-# Optional: Custom branding
-VITE_APP_NAME=StreamFlix
+VITE_APP_NAME=SanuFlix
 VITE_LOGO_URL=
 ```
 
 ### 3. Configure Streaming Servers
 
-Edit `src/config/servers.ts` to add your embed server URLs:
+Edit `src/config/servers.ts` with your embed server URLs:
 
 ```typescript
 export const STREAMING_SERVERS: StreamingServer[] = [
   {
-    id: 'myserver',
-    name: 'My Server',
-    description: 'Primary streaming',
+    id: 'server1',
+    name: 'Server 1',
+    description: 'Primary streaming server',
     isActive: true,
-    movieUrlTemplate: 'https://your-server.com/movie/{tmdbId}',
-    tvUrlTemplate: 'https://your-server.com/tv/{tmdbId}/{season}/{episode}',
+    movieUrlTemplate: 'https://your-embed.example/movie/{tmdbId}',
+    tvUrlTemplate: 'https://your-embed.example/tv/{tmdbId}/{season}/{episode}',
   },
 ]
 ```
 
-### 4. Run
+### 4. Run Locally
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173)
+---
+
+## ☁️ Deploy to Cloudflare Pages
+
+### Option 1: Direct GitHub Integration (Recommended)
+
+1. Push your configured repo to GitHub
+2. Go to [Cloudflare Pages Dashboard](https://dash.cloudflare.com/?to=/:account/pages)
+3. Click **Create a project** → **Connect to Git**
+4. Select your repository
+5. Configure build settings:
+   - **Framework preset**: `Vite`
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+6. Add environment variables:
+   - `VITE_TMDB_API_KEY` = your TMDB key
+7. Click **Save and Deploy**
+
+### Option 2: Wrangler CLI
+
+```bash
+# Install Wrangler
+npm install -g wrangler
+
+# Login to Cloudflare
+wrangler login
+
+# Build the project
+npm run build
+
+# Deploy
+wrangler pages deploy dist --project-name=sanuflix
+```
 
 ---
 
 ## ✨ Features
 
-- **Modern UI/UX** - React + Tailwind CSS, mobile-first design
-- **Progressive Web App** - Installable with offline support
-- **Smooth Animations** - Framer Motion transitions
-- **Type-Safe** - Full TypeScript
-- **Theme Support** - Multiple color themes
-- **SEO Ready** - React Helmet for meta tags
+- 🎨 Modern UI with Tailwind CSS
+- 📱 PWA - Installable on any device
+- 🎭 Multiple color themes
+- 🔍 Search movies & TV shows
+- 📺 Multi-server support
+- ⚡ Fast with Vite + React
 
 ## 🛠 Tech Stack
 
-| Category | Technologies |
-|----------|-------------|
-| Core | React 18, TypeScript, Vite |
-| Styling | Tailwind CSS, Framer Motion |
-| Routing | React Router DOM |
-| HTTP | Axios |
-| PWA | Vite Plugin PWA, Workbox |
+React 18 • TypeScript • Vite • Tailwind CSS • Framer Motion
 
-## 📁 Key Files to Configure
+## 📁 Key Configuration Files
 
 | File | Purpose |
 |------|---------|
-| `.env` | API keys and app config |
-| `src/config/servers.ts` | Streaming server URLs |
+| `.env` | API keys |
+| `src/config/servers.ts` | Embed server URLs |
 | `src/config/themes.ts` | Color themes |
 
-## 📋 Available Scripts
+## 📋 Scripts
 
 ```bash
-npm run dev      # Development server
+npm run dev      # Development
 npm run build    # Production build
-npm run preview  # Preview production
-npm run lint     # Run ESLint
+npm run preview  # Preview build
+npm run lint     # Lint code
 ```
-
-## ⚠️ Disclaimer
-
-This is a template for educational purposes. The developers are not responsible for how this software is used. Ensure you comply with all applicable laws and terms of service when configuring streaming sources.
 
 ---
 
-## 📄 License
+## ⚖️ License
 
-MIT License - feel free to use and modify for your own projects.
+This project is licensed under the [MIT License](./LICENSE).
+
+---
+
+<div align="center">
+
+**Made with ❤️ by [Sanuu](https://github.com/Sanuu7)**
+
+</div>

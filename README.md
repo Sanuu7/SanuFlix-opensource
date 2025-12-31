@@ -21,7 +21,7 @@
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/sanuflix-opensource.git
+git clone https://github.com/Sanuu7/SanuFlix-opensource
 cd sanuflix-opensource
 npm install
 ```

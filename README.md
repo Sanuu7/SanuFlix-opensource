@@ -12,7 +12,7 @@
 ---
 
 > [!WARNING]
-> **Legal Disclaimer**: This application does not host, store, or distribute any movies, TV shows, or copyrighted content. All video content is provided by **third-party embed servers** that are configured by the user. The developer is not responsible for any content accessed through this application. Use at your own risk and ensure compliance with your local laws.
+> **Legal Disclaimer**: This application does not host, store, or distribute any movies, TV shows, or copyrighted content. All video content is provided by **third-party embed servers** that are configured by the user. The developer is not responsible for any content accessed through this application. Use at your own risk and ensure compliance with your local laws. pls contact me here if any issues https://t.me/sunglasszoro
 
 ---
 

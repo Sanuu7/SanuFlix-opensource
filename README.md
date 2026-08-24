@@ -4,7 +4,6 @@
 
 ![SanuFlix Homepage](https://raw.githubusercontent.com/Sanuu7/SanuFlix-opensource/main/homepage.png)
 
-### 🌐 [Live Demo](https://sanuflix-web-v2.pages.dev/)
 
 [![Deploy to Cloudflare Pages](https://img.shields.io/badge/Deploy-Cloudflare%20Pages-F38020?logo=cloudflare)](https://pages.cloudflare.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
